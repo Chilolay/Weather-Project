@@ -6,7 +6,7 @@ html body {
 
 body::after {
   content: "";
-  background-image: url(Images/Forest1.jpg);
+  background-image: url(images/forest1.jpg);
   opacity: 0.5;
   top: 0;
   left: 0;
