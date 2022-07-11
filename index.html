@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b67ff2b46c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-sm-3 col-md-6">
+          <!-- <span class="celsiusFahrenheit">
+              <a href="#" id="celsius">°C</a>
+              |
+              <a href="#" id="fahrenheit"> °F</a>
+            </span> -->
+          <!-- <span class="dailyHighLow">59° / 46°</span> -->
+          <div class="location-icon">
+            <h1 id="currentCity">Forks, WA</h1>
+            <div class="date" id="currentDate"></div>
+            <div class="temp">
+              <p class="current-temp">
+                <span id="currentTemp"
+                  >59°
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="nav-toggle-bar">
+        <span class="nav-toggle-bar-btn">5 Day Forecast</span>
+        <span class="nav-toggle-bar-btn">Hourly</span>
+        <span class="nav-toggle-bar-btn">Details</span>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fri</h5>
+              <i class="fa-solid fa-cloud-showers-heavy card-text"></i>
+              <p class="card-subtext">59° / 51°</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sat</h5>
+              <i class="fa-solid fa-cloud card-text"></i>
+              <p class="card-subtext">57° / 50°</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sun</h5>
+              <i class="fa-solid fa-sun card-text"></i>
+              <p class="card-subtext">58° / 50°</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Mon</h5>
+              <i class="fa-solid fa-cloud-sun card-text"></i>
+              <p class="card-subtext">60° / 51°</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+              <i class="fa-solid fa-cloud-sun-rain card-text"></i>
+              <p class="card-subtext">61° / 51°</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
+            <input
+              type="text"
+              class="form-control mx-1"
+              id="input"
+              placeholder="Enter City"
+            />
+            <button
+              type="submit"
+              id="btn_submit search"
+              class="btn btn-primary mx-1 button"
+            >
+              Search
+            </button>
+          </div>
+          <button
+            type="submit"
+            id="current"
+            class="btn btn-primary mx-1 button"
+          >
+            Current Location
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
