@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css" />
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -19,36 +18,40 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/b67ff2b46c.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col"></div>
-        <div class="col-sm-3 col-md-6">
-          <!-- <span class="celsiusFahrenheit">
-              <a href="#" id="celsius">°C</a>
-              |
-              <a href="#" id="fahrenheit"> °F</a>
-            </span> -->
-          <!-- <span class="dailyHighLow">59° / 46°</span> -->
+        <div class="col" id="location-date">
           <div class="location-icon">
-            <h1 id="currentCity">Forks, WA</h1>
+            <h1 id="currentCity">Seattle</h1>
             <div class="date" id="currentDate"></div>
-            <div class="temp">
-              <p class="current-temp">
-                <span id="currentTemp"
-                  >59°
-                  <i class="fa-solid fa-cloud-sun"></i>
-                </span>
-              </p>
-            </div>
+            <img
+              src="http://openweathermap.org/img/wn/04d@2x.png"
+              alt="cloud icon"
+              id="icon"
+            />
+            <div id="weatherDescription">Overcast</div>
           </div>
         </div>
         <div class="col"></div>
+        <div class="col" id="current-weather">
+          <div class="temp">
+            <div>
+              <span id="currentTemp">59 </span>
+              <span id="celsiusFahrenheit">
+                <a href="#" id="fahrenheit" class="active">°F</a>
+                |
+                <a href="#" id="celsius">°C</a>
+              </span>
+            </div>
+            <ul>
+              <li>Wind Speed: <span id="windSpeed">10</span> m/s</li>
+              <li>Humidity: <span id="humidity">20</span>%</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="nav-toggle-bar">
@@ -135,10 +138,12 @@
           </button>
         </div>
       </div>
-    <div class="githubLink">
-      <a href="https://github.com/Chilolay/Weather-Project" target="_blank">Open Source Code</a>
-      <p>, By Chloe Boyd</p>
-    </div>
+      <div class="githubLink">
+        <a href="https://github.com/Chilolay/Weather-Project" target="_blank"
+          >Open Source Code</a
+        >
+        <p>, By Chloe Boyd</p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

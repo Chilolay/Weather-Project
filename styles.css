@@ -35,23 +35,48 @@ body::after {
 
 .location-icon h1 {
   font-size: 3.4rem;
+  margin-bottom: 0;
 }
 
-div .current-temp {
-  font-size: 4rem;
-  line-height: 4rem;
-  margin-bottom: 0px;
+#currentDate {
+  display: flex;
+  flex-direction: row;
 }
 
 .temp {
-  border-radius: 0.375rem;
-  margin: 0.25rem;
+  text-align: center;
+  margin: 4rem 0.25rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: transparent;
+  border-color: transparent;
+  backdrop-filter: blur(20px);
   padding: 1rem;
+  border-radius: 0.375rem;
 }
 
-.celsiusFahrenheit {
-  font-size: 1.2rem;
+#currentTemp {
+  font-size: 4rem;
+  margin: 20px 0;
 }
+
+ #weatherDescription {
+  text-transform: capitalize;
+}
+
+ul li {
+  list-style: none;
+  margin: 6px;
+}
+
+div a #celsiusFahrenheit {
+  font-size: 1.2rem;
+
+}
+
 #celsius {
   color: white;
 }
