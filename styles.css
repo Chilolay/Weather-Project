@@ -93,7 +93,7 @@ div a #celsiusFahrenheit {
   color: rgb(103, 116, 84);
 }
 
-.nav-toggle-bar {
+.weather-forecast {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-weight: bolder;
@@ -101,11 +101,12 @@ div a #celsiusFahrenheit {
   border-color: transparent;
   backdrop-filter: blur(20px);
   border-radius: 0.375rem;
-}
-
-.nav-toggle-bar-btn {
   font-size: 1.2rem;
   padding: 1rem 2.5rem;
+  display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div .card {
@@ -115,20 +116,21 @@ div .card {
 }
 div .card-body {
   text-align: center;
+    font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 div .card-title {
   font-size: 1.5rem;
 }
 
-div .card-text {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
 div .card-subtext {
   font-size: 1.3rem;
+}
+
+.weather-forecast-daily-min {
+opacity: 0.6;
 }
 
 div input[type="text"] {
