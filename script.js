@@ -75,8 +75,16 @@ function searchInput(event) {
     }
   });
 
-  //Get current location, lat and long and send it to displayForcast
-  navigator.geolocation.getCurrentPosition(displayForecast);
+  axios.get(apiUrl).then((res) => displayForecastForSpecificCity(res));
+  
+}
+
+const displayForecastForSpecificCity = (res) => {
+    let lat = res.data.coord.lat;
+    let lon = res.data.coord.lon;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+    axios.get(apiUrl).then((res) => forecast(res.data.daily));
 }
 
 let inputValue = document.querySelector("#input");
